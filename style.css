@@ -1,12 +1,37 @@
+html {
+    color-scheme: light dark;
+}
 
-p {
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+/* p {
     width: min(100% - 3rem, 65ch);
-    /* width: 65ch; */
-    /* max-width: 68ch; */
+    width: 65ch; 
+    max-width: 68ch; 
+} */
+
+article {
+    width: min(65ch, 100% - 5rem);
+    margin-inline: auto;
 }
 
 img,
-svg {
-    width: 100%;
-    height: auto;
+svg,
+video {
+    /* notice the difference between max width and width */
+    max-width: 100%;
+    /* width: 100%; */
+    /* height: auto; */
+    /* don't forget the display:block. it will avoid the space left for the font. */
+    display: block;
+}
+
+p {
+    word-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+    
 }
